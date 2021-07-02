@@ -55,7 +55,7 @@ text.addEventListener('keyup', (event) => {
         {
             if(str.charAt(i)==pairs[j].a)
             {
-                if(Math.random()<0.5){
+                if(Math.random()<0.8){
                     str = str.replaceAt(i,   pairs[j].b);
                 }
                 break;
