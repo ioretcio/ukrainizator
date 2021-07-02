@@ -45,6 +45,8 @@ pairs.push(new pair('T', 'Т'));
 pairs.push(new pair('X', 'Х'));
 pairs.push(new pair('Y', 'У'));
 
+pairs.push(new pair('3', 'З'));
+pairs.push(new pair('4', 'Ч'));
 
 text.addEventListener('keyup', (event) => {
     var str = text.value;
