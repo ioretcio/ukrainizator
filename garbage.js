@@ -1,6 +1,6 @@
 var text = document.getElementById("fname");
 var label = document.getElementById("labelname");
-
+var label1 = document.getElementById("labelname1");
 class pair {
     constructor(a,b) {
         this.a = a;
@@ -11,8 +11,6 @@ class pair {
 String.prototype.replaceAt = function(index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + replacement.length);
 }
-
-
 let pairs = [];
 
 pairs.push(new pair('i', 'і'));
@@ -50,8 +48,19 @@ pairs.push(new pair('4', 'Ч'));
 
 text.addEventListener('keyup', (event) => {
     var str = text.value;
+    var str1 ="";
+    for (var i = 0; i < str.length; i++)
+    {
+
+        str1 += str[i]
+        if(Math.random()<0.65){
+            str1 += '\u2060';
+        }
+
+    }
     for (var i = 0; i < str.length+1; i++) {
 
+        
 
         for(var j = 0; j<pairs.length; j++)
         {
@@ -65,4 +74,5 @@ text.addEventListener('keyup', (event) => {
         }
       }
       label.innerHTML = str;
+      label1.innerHTML = str1;
   });
