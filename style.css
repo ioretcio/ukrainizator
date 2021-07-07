@@ -1,13 +1,9 @@
-#id0{
-    color: red;
-}
-#id1{
-    color: blue;
-}
+
 #fname{
     width: 600px;
 }
 #alldiv{
+    background-color: gray;
     position: relative;
     margin: 0;
     position: absolute;
