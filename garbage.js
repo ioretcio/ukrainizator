@@ -1,4 +1,9 @@
 var text = document.getElementById("fname");
+
+var percent1 = document.getElementById("per1");
+var percent2 = document.getElementById("per2");
+
+
 var label = document.getElementById("labelname");
 var label1 = document.getElementById("labelname1");
 class pair {
@@ -46,27 +51,29 @@ pairs.push(new pair('Y', 'У'));
 pairs.push(new pair('3', 'З'));
 pairs.push(new pair('4', 'Ч'));
 
-text.addEventListener('keyup', (event) => {
+
+
+function refresh()
+{
+    var cent1 = percent1.value;
+    var cent2 = percent2.value;
+
     var str = text.value;
     var str1 ="";
     for (var i = 0; i < str.length; i++)
     {
-
         str1 += str[i]
-        if(Math.random()<0.65){
+        if(Math.random()<cent2/100){
             str1 += '\u2060';
         }
-
     }
     for (var i = 0; i < str.length+1; i++) {
-
-        
-
         for(var j = 0; j<pairs.length; j++)
         {
             if(str.charAt(i)==pairs[j].a)
             {
-                if(Math.random()<0.8){
+                
+                if(Math.random()<cent1/100){
                     str = str.replaceAt(i,   pairs[j].b);
                 }
                 break;
@@ -75,4 +82,18 @@ text.addEventListener('keyup', (event) => {
       }
       label.innerHTML = str;
       label1.innerHTML = str1;
-  });
+}
+
+
+
+text.addEventListener('keyup', (event) => {
+    refresh();
+});
+
+percent1.addEventListener('keyup', (event) => {
+    refresh();
+});
+
+percent2.addEventListener('keyup', (event) => {
+    refresh();
+});
