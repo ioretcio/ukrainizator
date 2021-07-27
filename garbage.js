@@ -19,13 +19,12 @@ String.prototype.replaceAt = function(index, replacement) {
 let pairs = [];
 
 pairs.push(new pair('i', 'і'));
-pairs.push(new pair('r', 'г'));
 pairs.push(new pair('o', 'о'));
 pairs.push(new pair('p', 'р'));
 pairs.push(new pair('m', 'м'));
 pairs.push(new pair('n', 'п'));
 pairs.push(new pair('h', 'н'));
-pairs.push(new pair('b', 'в'));
+pairs.push(new pair('b', 'Ь'));
 pairs.push(new pair('t', 'т'));
 pairs.push(new pair('a', 'а'));
 pairs.push(new pair('c', 'с'));
